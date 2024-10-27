@@ -217,9 +217,9 @@ svg {
 }
 
 .nav__toggle, 
-.nav__toggle{
+.nav__close{
   display: flex;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--title-color);
   cursor: pointer;
 }
@@ -275,10 +275,96 @@ svg {
 
 
 /*=============== HOME ===============*/
+.home{
+  background-color: var(--body-color);
+}
 
+.home__container{
+  padding-top: 2rem;
+  row-gap: 2.5rem;
+}
+
+.home__content{
+  display: grid;
+  row-gap: 2rem;
+}
+
+.home__data{
+  text-align: center;
+}
+
+.home__subtitle,
+.home__description{
+  font-size: var(--bigger-font-size);
+}
+
+.home__subtitle span,
+.home__title{
+  color: var(--first-color);
+}
+
+.home__title{
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+.home__description{
+  margin-block: 1rem 1.5rem;
+}
+
+.home__social{
+  display: flex;
+  justify-content: center;
+  column-gap: 1.25rem;
+}
+
+.home__social-link{
+  display: flex;
+  background-color: var(--body-color);
+  padding: .5rem;
+  color: var(--title-color);
+  font-size: 1.5rem;
+  transition: transform .4s;
+}
+
+.home__social-link:hover{
+  transform: translateY(-.25rem);
+}
+
+
+.home__image {
+  position: relative;
+  justify-self: center;
+  overflow: visible;
+}
+
+.home__blob {
+  width: 400px;
+  fill: var(--body-color);
+  filter: drop-shadow(0 12px 12px hsla(var(--hue), 100%, 40%, .2));
+}
+
+.home__img {
+  position: absolute;
+  top: 2%; /* Move a imagem para cima */
+  left: -5%; /* Move a imagem um pouco para a esquerda */
+  width: 180%; /* Faz a imagem ocupar 120% do blob, "saindo" das bordas */
+}
 
 /*=============== BUTTON ===============*/
+.button{
+  display: inline;
+  background-color: var(--first-color);
+  padding: 1rem 1.75rem;
+  border-radius: .5rem;
+  color: var(--body-color);
+  font-weight: var(--font-medium);
+  transition: box-shadow .4s;
+}
 
+.button:hover{
+  box-shadow: 0 8px 24px hsla(var(--hue), 100%, 40%, ,25);
+}
 
 /*=============== ABOUT ===============*/
 
