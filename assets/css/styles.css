@@ -367,6 +367,29 @@ svg {
 }
 
 /*=============== ABOUT ===============*/
+.carrinho__container{
+  row-gap: 2.5rem;
+}
+
+.carrinho__data{
+  text-align: center;
+}
+
+.carrinho__description{
+  margin-bottom: 2rem;
+}
+
+.carrinho__image{
+  justify-self: center;
+}
+
+.carrinho__blob{
+  width: 320px;
+}
+
+.carrinho__blob path{
+  stroke: var(--first-color);
+}
 
 
 /*=============== SKILLS ===============*/
