@@ -410,7 +410,48 @@ svg {
 
 
 /*=============== SKILLS ===============*/
+.project{
+  background-color: var(--container-color);
+}
 
+.project__container{
+  padding-bottom: 2rem;
+  row-gap: 3.5rem;
+}
+
+.project__data{
+  text-align: center;
+}
+
+.project__description{
+  margin-bottom: 2rem;
+}
+
+.project__content,
+.project__group{
+  display: grid;
+}
+
+.project__content{
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 4rem;
+  justify-self: center;
+  align-items: baseline;
+}
+
+.project__group{
+  row-gap: 1rem;
+  list-style: decimal-leading-zero;
+}
+
+.project__item{
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+
+.project__item::marker{
+  color: var(--first-color);
+}
 
 /*=============== SERVICES ===============*/
 
