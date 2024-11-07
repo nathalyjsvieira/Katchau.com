@@ -151,7 +151,7 @@
                      problemas na engenharia do projeto. 
                   </p>
 
-                  <a href="#contact" class="button">Entre em contato</a>
+                  <a href="#contato" class="button">Entre em contato</a>
                </div>
 
                <div class="carrinho_image">
@@ -378,7 +378,30 @@
 
          <!--==================== CONTACT - contato ====================-->
          <section class="contato section" id="contato">
-            
+            <h3 class="section__subtitle">
+               Entre em <span>Contato</span>
+            </h3>
+
+            <h2 class="section__title">
+               Dê seu Feedback!
+            </h2>
+
+            <div class="contato__container container grid">
+               <form action="" class="contato__form" id="contato-form">
+                  <div class="contato__group">
+                     <input type="text" name="user_name" required placeholder="Insira seu nome" class="contato__input">
+                     <input type="email" name="user_email" required placeholder="Insira seu email" class="contato__input">
+                  </div>
+
+                  <textarea name="user_message" required placeholder="Insira sua mensagem" class="contato__input"></textarea>
+               
+                  <p class="contato__message" id="contato-message"></p>
+
+                  <button type="submit" class="button contato__button">
+                     Enviar Mensagem
+                  </button>
+               </form>
+            </div>
          </section>
       </main>
 
@@ -408,8 +431,9 @@
       <script src=""></script>
 
       <!--=============== EMAIL JS ===============-->
-      
-
+      <script
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+      </script>
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
    </body>
