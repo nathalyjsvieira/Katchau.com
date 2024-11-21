@@ -291,7 +291,7 @@ svg {
 
 
 /* Active link */
-.active-link {
+.active-link{
   color: var(--first-color);
 }
 
@@ -769,7 +769,7 @@ svg {
   .nav{
     height: calc(var(--header-height) + 1.5rem);
   }
-
+  
   .nav__close,
   .nav__toggle{
     display: none;
@@ -777,10 +777,151 @@ svg {
 
   .nav__list{
     flex-direction: row;
-    column-gap: 3rem;
+    row-gap: 3rem;
+  }
+
+  .nav__menu{
+    width: initial;
+  }
+
+  .blur-header::after{
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
   }
 }
 
+@media screen and (min-width: 1152px){
+  .container{
+    margin-inline: auto;
+  }
+
+  .home__container{
+    grid-template-columns: 455px 550px;
+    column-gap: 7rem;
+    padding-block: 2rem 3rem0;
+  }
+
+  .home__blob{
+    width: 550px;
+  }
+
+  .home__content{
+    row-gap: 4.5rem;
+  }
+
+  .home__description{
+    margin-block: 1.5rem 2.5rem;
+  }
+
+  .home__social{
+    column-gap: 1.5rem;
+  }
+
+  .carrinho__container{
+    grid-template-columns: 550px 460px;
+    column-gap: 4.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .carrinho__blob{
+    width: 550px;
+  }
+
+  .carrinho__description{
+    margin-bottom: 3rem;
+  }
+
+  .project__container{
+    grid-template-columns: 340px 425px;
+    column-gap: 10rem;
+    padding-bottom: 4rem;
+  }
+
+  .project__description{
+    margin-bottom: 3rem;
+  }
+
+  .project__content{
+    column-gap: 3rem;
+  }
+
+  .project__group{
+    row-gap: 1.5rem;
+  }
+
+  .project__item{
+    font-size: var(--h3-font-size);
+  }
+
+  .workflow__container{
+    grid-template-columns: repeat(3,352);
+    padding-block: 2.5rem 4rem;
+  }
+
+  .workflow__card{
+    padding: 3.5rem 2rem;
+  }
+
+  .documents__container{
+    grid-template-columns: repeat(3, 358px);
+    row-gap: 3rem;
+    padding-block: 2.5rem 4rem;
+  }
+
+  .documents__button{
+    font-size: var(--normal-font-size);
+  }
+
+
+  .contato__container{
+    grid-template-columns: 680px;
+    padding-block: 2.5rem 2rem;
+  }
+
+  .contato__form{
+    row-gap: 1.5rem;
+  }
+
+  .contato__group{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+
+  .contato__input{
+    padding: 1.5rem;
+  }
+
+  .contato__form textarea {
+    height: 28rem;
+  }
+
+  .footer{
+    padding-block: 4.5rem 4rem;
+  }
+
+  .footer__container{
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    text-align: initial;
+  }
+
+  .footer__title{
+    font-size: var(--bigger-font-size);
+  }
+
+  .footer__social{
+    column-gap: 1.5rem;
+  }
+
+  .footer__copy{
+    margin: 0;
+    justify-self: flex-end;
+  }
+
+  .scrollup{
+    right: 3rem;
+  }
+}
 
 /*=============== SKILLS - project ===============*/
 
