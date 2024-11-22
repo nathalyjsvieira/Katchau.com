@@ -50,16 +50,35 @@
   *========== z index ==========
   --z-tooltip: 10;
   --z-fixed: 100;
+
+Change favorite color
+      Default: hsl(255, 90%, 60%)
+      Orange: hsl(14, 90%, 60%) - Blue: hsl(210, 90%, 50%)
+      Pink: hsl(356, 100%, 65%) - Green: hsl(162, 90%, 40%)
+
+      For more colors visit: https://colors.dopely.top/color-pedia
+      -> Choose any color 
+      -> Click on tab (Color Conversion)
+      -> Copy the color mode (HSL)
+  
   */
 
+  /*
   --hue: 4;
   --first-color: hsl(var(--hue), 90%, 39%);
+  */
+
+  --hue: 1;
+  --first-color: hsl(var(--hue), 100%, 33%);
   --first-color-alt: hsl(var(--hue), 56%, 35%);
+  --first-color-light: hsl(var(--hue), 40%, 80%);
   --title-color: hsl(228, 15%, 15%);
   --text-color: hsl(228, 15%, 15%);
+  --text-color-light: hsl(var(--hue), 8%, 60%);
+  --white-color: hsl(0, 0%, 100%);
   --body-color: hsl(300, 100%, 99%);
-  --container-color: hsl(228, 8%, 65%);
-
+  --container-color: hsl(220, 6%, 89%);
+  --shadow-color: hsla(var(--hue), 90%, 30%, .1);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -81,6 +100,7 @@
   /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
+  --z-modal: 1000;
 }
 
 /*========== Responsive typography ==========*/
@@ -119,6 +139,7 @@ body {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
+  transition: background-color .4s;
 }
 
 input,
@@ -128,10 +149,7 @@ button {
   border: none;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   color: var(--title-color);
   font-weight: var(--font-medium);
 }
@@ -149,6 +167,18 @@ svg {
   max-width: 100%;
   height: auto;
 }
+
+/*=============== THEME ===============*/
+
+
+/*========== Variables Dark theme ==========*/
+
+
+/*========== 
+	Color changes in some parts of 
+	the website, in dark theme
+==========*/
+
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -192,103 +222,92 @@ svg {
 }
 
 /*=============== HEADER & NAV ===============*/
-.header {
+.header{
   position: fixed;
   width: 100%;
-  background-color: var(--container-color);
   top: 0;
   left: 0;
+  background-color: var(--first-color);
   z-index: var(--z-fixed);
+  transition: background-color .4s, box-shadow .4s;
 }
 
-.nav {
+.nav{
+  position: relative;
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nav__logo {
-  color: var(--title-color);
-  font-weight: var(--font-medium);
-}
-
-.nav__logo span {
-  color: var(--first-color);
-}
-
-.nav__toggle,
-.nav__close {
-  display: flex;
-  font-size: 1.5rem;
-  color: var(--title-color);
-  cursor: pointer;
-}
-
-/* Navigation for mobile devices */
-@media screen and (max-width: 1023px) {
-  .nav__menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    background-color: hsla(0, 0%, 10%, .3);
-    width: 75%;
-    height: 100%;
-    padding: 4.5rem 0 0 3rem;
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    /* For safari */
-    transition: right .4s;
-  }
-}
-
-.nav__list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 3rem;
-}
-
-.nav__link {
-  color: var(--title-color);
-  font-weight: var(--font-medium);
+.nav__logo{
+  color: var(--white-color);
+  font-weight: var(--font-semi-bold);
   transition: color .4s;
 }
 
-.nav__link:hover {
+.nav__toggle,
+.nav__close{
+  display: inline-flex;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.nav__toggle{
+  color: var(--white-color);
+}
+
+.nav__close{
+  color: var(--title-color);
+}
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1150px) {
+  .nav__menu{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background-color: var(--body-color);
+    width: 100%;
+    box-shadow: 0 12px 24px var(--shadow-color);
+    padding-block: 5rem 4rem;
+    transition: top .4s;
+  }
+}
+
+.nav__list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+  text-align: center;
+}
+
+.nav__link{
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  transition: color .4s;
+}
+
+.nav__link:hover{
   color: var(--first-color);
 }
 
-/* AUmentar o close */
-.nav__close {
+.nav__close{
   position: absolute;
-  top: 1rem;
+  top: 1.15rem;
   right: 1.5rem;
 }
 
+
+/* Aumentar o close */
+
 /* Show menu */
-.show-menu {
-  right: 0;
+.show-menu{
+  top: 0;
 }
+
 
 /* Add blur to header */
-.blur-header {
-  background-color: transparent;
-}
-
-
-.blur-header::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: hsla(0, 0%, 10%, .3);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
 
 /* Active link */
 .active-link{
