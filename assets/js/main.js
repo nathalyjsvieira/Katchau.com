@@ -1,25 +1,21 @@
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
-      navToggle = document.getElementById('nav-toggle'),
-      navClose = document.getElementById('nav-close')
+    navToggle = document.getElementById('nav-toggle'),
+    navClose = document.getElementById('nav-close')
 
 /* Menu show */
-if(navToggle){
-    navToggle.addEventListener('click', () =>{
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu')
     })
 }
 
 /* Menu hidden */
-if(navClose){
-    navClose.addEventListener('click', () =>{
+if (navClose) {
+    navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-menu')
     })
 }
-
-/*=============== REMOVE MENU MOBILE ===============*/
-
-/*=============== ADD BLUR TO HEADER ===============*/
 
 /*=============== EMAIL JS ===============*/
 const contactForm = document.getElementById('contato__form'),
@@ -79,13 +75,12 @@ const sr = ScrollReveal({
     distance: '60px',
     duration: '2500',
     delay: 400,
-    //reset: true // Animation repeat
 })
 
 sr.reveal('.home__data, .home__social, .contato__container, .footer__container')
-sr.reveal('.home__image', {origin: 'bottom'})
-sr.reveal('.carrinho__data, .project__data', {origin: 'left'})
-sr.reveal('.carrinho__image, .project__content', {origin: 'right'})
-sr.reveal('.workflow__card, .documents__card', {interval: 100})
+sr.reveal('.home__image', { origin: 'bottom' })
+sr.reveal('.carrinho__data, .project__data', { origin: 'left' })
+sr.reveal('.carrinho__image, .project__content', { origin: 'right' })
+sr.reveal('.workflow__card, .documents__card', { interval: 100 })
 
 /*=============== DARK LIGHT THEME ===============*/ 
