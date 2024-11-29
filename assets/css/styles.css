@@ -858,7 +858,7 @@ svg {
   .home__container {
     grid-template-columns: 512px 560px;
     column-gap: 3rem;
-    padding-block: 2rem 3rem;
+    padding-block: 1rem 2rem;
     align-items: center;
   }
 
