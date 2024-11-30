@@ -12,7 +12,7 @@
    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
 
    <!--=============== SWIPER CSS ===============-->
-   <link rel="stylesheet" href="">
+   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
    <!--=============== CSS ===============-->
    <link rel="stylesheet" href="assets/css/styles.css">
@@ -35,21 +35,25 @@
                <li class="nav__item">
                   <a href="#equipe" class="nav__link">Equipe</a>
                </li>
+               
+               <li class="nav__item">
+                  <a href="#workflow" class="nav__link">Saiba Mais</a>
+               </li>
 
                <li class="nav__item">
                   <a href="#documents" class="nav__link">Documentos</a>
                </li>
 
                <li class="nav__item">
-                  <a href="#workflow" class="nav__link">Saiba Mais</a>
+                  <a href="#robocar" class="nav__link">Robocar Race</a>
                </li>
 
                <li class="nav__item">
                   <a href="#contato" class="nav__link">Feedback</a>
                </li>
+
             </ul>
 
-            <!-- Close button -->
             <div class="nav__close" id="nav-close">
                <i class="ri-close-fill"></i>
             </div>
@@ -59,7 +63,7 @@
          <div class="nav__actions">
             <!-- Theme button -->
 
-            <!-- Toggle button -->
+
             <div class="nav__toggle" id="nav-toggle">
                <i class="ri-menu-4-line"></i>
             </div>
@@ -94,7 +98,7 @@
          </div>
       </section>
 
-      <!--==================== CARRINHO - ABOUT ====================-->
+      <!--==================== CARRINHO  ====================-->
       <section class="carrinho section" id="carrinho">
          <div class="carrinho__container container grid">
             <div class="carrinho__data">
@@ -150,14 +154,75 @@
                      </pattern>
 
                      <image class="carrinho_img" id="imageBorder" width="640" height="940"
-                        href="assets/img/carrinho1.jpg" />
+                        href="assets/img/carrinho.jpg" />
                   </defs>
                </svg>
             </div>
          </div>
       </section>
 
-      <!--==================== SKILLS - projects ====================-->
+      <!--==================== TEAM ====================-->
+      <section class="team section">
+         <h2 class="section__title">
+             Nossa equipe
+         </h2>
+
+         <div class="team__container container">
+             <div class="team__swiper swiper">
+                 <div class= "swiper-wrapper">
+                     <article class="team__card swiper-slide">
+                         <div class="team__border">
+                             <img src="assets/img/henrique.jpg" alt="image" class="team__img">
+                         </div>
+
+                         <h2 class="team__name">Henrique Macedo</h2>
+                         <p class="team__description">
+                             Responsável pelo chassi e pelo código do arduíno.
+                         </p>
+                     </article>
+
+                     <article class="team__card swiper-slide">
+                         <div class="team__border">
+                             <img src="assets/img/isaque.jpg" alt="image" class="team__img">
+                         </div>
+                         
+                         <h2 class="team__name">Isaque Rocha</h2>
+                         <p class="team__description">
+                             Responsável pela construção do caderno do projeto.
+                         </p>
+                     </article>
+
+                     <article class="team__card swiper-slide">
+                         <div class="team__border">
+                             <img src="assets/img/miguel.jpg" alt="image" class="team__img">
+                         </div>
+                         
+                         <h2 class="team__name">Miguel Pimentel</h2>
+                         <p class="team__description">
+                             Responsável pela montagem dos compomentes eletrõnicos do carrinho.
+                         </p>
+                     </article>
+
+                     <article class="team__card swiper-slide">
+                         <div class="team__border">
+                             <img src="assets/img/nathaly.jpg" alt="image" class="team__img">
+                         </div>
+                         
+                         <h2 class="team__name">Nathaly Vieira</h2>
+                         <p class="team__description">
+                             Responsável pelo desenvolvimento do site do projeto. 
+                         </p>
+                     </article>
+                 </div>
+             </div>
+
+               <!-- Pagination -->
+             <div class="swiper-pagination"></div>
+         </div>
+       </section>
+
+
+      <!--==================== SKILLS ====================-->
       <section class="project section">
          <div class="project__container container grid">
             <div class="project__data">
@@ -195,14 +260,14 @@
          </div>
       </section>
 
-      <!--==================== SERVICES - workflow ====================-->
+      <!--==================== SERVICES ====================-->
       <section class="workflow section" id="workflow">
          <h3 class="section__subtitle">
-            hhhhh <span>Etapas</span>
+            Como <span>fizemos?</span>
          </h3>
 
          <h2 class="section__title">
-            KAKAKAKAKAKA
+            Saiba mais
          </h2>
 
          <div class="workflow__container container grid">
@@ -221,7 +286,7 @@
             <article class="workflow__card">
                <i class="ri-layout-3-line workflow__icon"></i>
 
-               <h2 class="workflow__title">Teste Teste</h2>
+               <h2 class="workflow__title">Montagem eletrônica</h2>
 
                <p class="workflow__description">
                   izemos o chassi do carrinho bla
@@ -233,12 +298,30 @@
             <article class="workflow__card">
                <i class="ri-layout-3-line workflow__icon"></i>
 
-               <h2 class="workflow__title">Teste Teste</h2>
+               <h2 class="workflow__title">Código do arduíno</h2>
 
                <p class="workflow__description">
-                  izemos o chassi do carrinho bla
-                  bka bla bla
-                  bla bla bla
+                  O código controla um carrinho autônomo com um sensor ultrassônico
+                   e motores gerenciados por Arduino, permitindo navegação em ambientes
+                    com obstáculos. O sensor oscilante mede distâncias frontais e 
+                    laterais para decidir movimentos. Ao encontrar um obstáculo, o 
+                    carrinho para, verifica as laterais, prioriza o lado com maior 
+                    espaço e realiza curvas ou ré para desviar. A velocidade é ajustada
+                     gradualmente para garantir movimentos suaves e eficientes.
+               </p>
+            </article>
+
+            <article class="workflow__card">
+               <i class="ri-layout-3-line workflow__icon"></i>
+
+               <h2 class="workflow__title">Site do projeto</h2>
+
+               <p class="workflow__description">
+                  O site foi desenvolvido em html, css e javascript. Tentamos produzir um site
+                  leve, responsivo e completo para funcionar como o principal meio de documentação
+                  do nosso projeto. Seguimos a estética já definida anteriormente pelo grupo no 
+                  primeiro semestre, com o vermelho, cinza, branco e preto como paleta de cores e 
+                  o personagem McQueen do filme Carros como identidade visual.
                </p>
             </article>
          </div>
@@ -256,21 +339,21 @@
 
          <div class="documents__container container grid">
             <article class="documents__card">
-               <img src="assets/img/image-teste.jpeg" alt="documents image" class="documents__img">
+               <img src="assets/img/robocarrace-5.jpg" alt="documents image" class="documents__img">
 
                <div class="documents__modal">
                   <span class="documents__subtitle">Vídeo</span>
 
                   <h3 class="documents__title">Pitch</h3>
 
-                  <a href="#" class="documents__button">
+                  <a href="https://www.youtube.com/watch?v=lxmOrjWWEyg" class="documents__button">
                      Assista o vídeo <i class="ri-links-line"></i>
                   </a>
                </div>
             </article>
 
             <article class="documents__card">
-               <img src="assets/img/image-teste.jpeg" alt="documents image" class="documents__img">
+               <img src="assets/img/eletronico-img.jpg" alt="documents image" class="documents__img">
 
                <div class="documents__modal">
                   <span class="documents__subtitle">Nosso</span>
@@ -278,27 +361,27 @@
                   <h3 class="documents__title">Caderno</h3>
 
                   <a href="#" class="documents__button">
-                     Assista o vídeo <i class="ri-links-line"></i>
+                     Leia sobre o projeto <i class="ri-links-line"></i>
                   </a>
                </div>
             </article>
 
             <article class="documents__card">
-               <img src="assets/img/image-teste.jpeg" alt="documents image" class="documents__img">
+               <img src="assets/img/carrinho-3.jpg" alt="documents image" class="documents__img">
 
                <div class="documents__modal">
                   <span class="documents__subtitle">Código no</span>
 
                   <h3 class="documents__title">GitHub</h3>
 
-                  <a href="#" class="documents__button">
-                     Assista o vídeo <i class="ri-links-line"></i>
+                  <a href="https://github.com/nathalyjsvieira/Katchau.com" class="documents__button">
+                     Saiba mais <i class="ri-links-line"></i>
                   </a>
                </div>
             </article>
 
             <article class="documents__card">
-               <img src="assets/img/image-teste.jpeg" alt="documents image" class="documents__img">
+               <img src="assets/img/equipe.jpg" alt="documents image" class="documents__img">
 
                <div class="documents__modal">
                   <span class="documents__subtitle">Nosso</span>
@@ -306,39 +389,24 @@
                   <h3 class="documents__title">Banner</h3>
 
                   <a href="#" class="documents__button">
-                     Assista o vídeo <i class="ri-links-line"></i>
+                     Acesse <i class="ri-links-line"></i>
                   </a>
                </div>
             </article>
 
             <article class="documents__card">
-               <img src="assets/img/image-teste.jpeg" alt="documents image" class="documents__img">
+               <img src="assets/img/carrinho-1.jpg" alt="documents image" class="documents__img">
 
                <div class="documents__modal">
-                  <span class="documents__subtitle">Vídeo</span>
+                  <span class="documents__subtitle">Modelagem</span>
 
-                  <h3 class="documents__title">Pitch</h3>
+                  <h3 class="documents__title">Chassi</h3>
 
-                  <a href="#" class="documents__button">
-                     Assista o vídeo <i class="ri-links-line"></i>
+                  <a href="assets/img/desenho-chassi.pdf" class="documents__button">
+                     Veja o desenho <i class="ri-links-line"></i>
                   </a>
                </div>
             </article>
-
-            <article class="documents__card">
-               <img src="assets/img/image-teste.jpeg" alt="documents image" class="documents__img">
-
-               <div class="documents__modal">
-                  <span class="documents__subtitle">Vídeo</span>
-
-                  <h3 class="documents__title">Pitch</h3>
-
-                  <a href="#" class="documents__button">
-                     Assista o vídeo <i class="ri-links-line"></i>
-                  </a>
-               </div>
-            </article>
-
          </div>
       </section>
 
@@ -398,19 +466,21 @@
       <i class="ri-arrow-up-line"></i>
    </a>
 
-   <!--=============== SCROLLREVEAL ===============-->
-   <script src="assets/js/scrollreveal.min.js"></script>
-
-   <!--=============== EMAIL JS ===============C -->
-   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
    <!--=============== MAIN JS ===============-->
    <script src="assets/js/main.js"></script>
 
+   <!--=============== CONTACT JS ===============-->
+   <script src="assets/js/contact.js"></script>
+
+
    <!--=============== SWIPER JS ===============-->
-   <script src=""></script>
+   <script src="assets/js/Swiper.1.js"></script>
 
    <!--=============== INDEX JS ===============-->
    <script src="assets/js/index.js"></script>
+
+   <!--=============== SCROLLREVEAL ===============-->
+   <script src=""></script>
 
 </body>
 

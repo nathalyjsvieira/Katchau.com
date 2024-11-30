@@ -148,11 +148,7 @@ svg {
 }
 
 .section__title span {
-  display: block;
-  background: var(--third-gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  color: var(--first-color);
 }
 
 .section__title,
@@ -441,7 +437,7 @@ svg {
   background-color: var(--first-color-alt);
 }
 
-/*=============== ABOUT ===============*/
+/*=============== CARRINHO ===============*/
 .carrinho__container {
   row-gap: 2.5rem;
 }
@@ -466,6 +462,63 @@ svg {
   stroke: var(--first-color);
 }
 
+/*=============== TESTIMONIAL ===============*/
+.team__container{
+  position: relative;
+}
+
+.team__swiper{
+  padding-bottom: 2rem;
+}
+
+.team__card{
+  background-color: var(--container-color);
+  padding: 2rem 1.25rem 2.5rem 1.25rem;
+  border-inline: 8px solid var(--first-color);
+  box-shadow: 0 12px 24px var(--shadow-color);
+  text-align: center;
+  transition: background-color .4s;
+}
+
+.team__border{
+  width: 100px;
+  height: 100px;
+  border: 6px solid var(--first-color);
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+.team__img{
+  filter: grayscale(1);
+  transition: filter .4s;
+}
+
+.team__name{
+  font-size: var(--h2-font-size);
+  margin-bottom: .5rem;
+}
+
+.team__card:hover .team__img{
+  filter: none;
+}
+
+/* Swiper class */
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+  bottom: -1rem;
+  margin-bottom: 3rem;
+}
+
+.swiper-paginaton-bullet{
+  background-color: var(--first-color-light);
+  opacity: 1;
+  margin-bottom: 3rem;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: var(--first-color);
+  margin-bottom: 3rem;
+}
 
 /*=============== SKILLS ===============*/
 .project {
@@ -912,7 +965,7 @@ svg {
   }
 
   .workflow__container {
-    grid-template-columns: repeat(3, 352px);
+    grid-template-columns: repeat(4, 352px);
     padding-block: 2.5rem 4rem;
   }
 
